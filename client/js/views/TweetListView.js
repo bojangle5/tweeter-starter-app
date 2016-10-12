@@ -10,7 +10,7 @@ const TweetListView = Backbone.View.extend({
           <label for="name">New Tweet</label>
           <input type="text" name="body" />
           <input type="submit" value="Post" />
-        
+
       </form>
       <ul id="tweetlist"></ul>
     </div>
@@ -28,7 +28,7 @@ const TweetListView = Backbone.View.extend({
     const form = $(e.target);
     const tweet = new TweetModel({
       body: form.find('input[name="body"]').val(),
-      user: $('[data-bootstrap]').data('bootstrap').userId
+      user: form.find('input[name="user"]').val(),
     });
 
       tweet.save(null, {

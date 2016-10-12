@@ -9,7 +9,6 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const passport = require('./config/passport');
 const flash = require('express-flash');
-
 const routes = require('./routes/index');
 const middleware = require('./routes/middleware');
 const users = require('./routes/users');

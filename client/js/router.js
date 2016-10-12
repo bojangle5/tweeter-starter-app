@@ -4,8 +4,6 @@ const UserView = require('./views/UserView');
 const NavBarView = require('./views/NavBarView');
 const TweetsCollection = require('./collections/TweetsCollection');
 
-
-
 let currentView;
 
 const Router = Backbone.Router.extend({
@@ -51,7 +49,7 @@ function setView(view) {
 
   const app = document.querySelector('#app');
   app.innerHTML = '';
-  $(app).html(view.render().el);
+  $(app).appendChild(view.render().el);
 };
 
 module.exports = Router;

@@ -3,7 +3,7 @@ const Backbone = require('backbone');
 const Router = require('./router');
 
 window.$ = window.jQuery = $;
-
+const bootstrap = require('bootstrap');
 const greeting = document.createElement('h2');
 
 var username = $('[data-bootstrap]').data('bootstrap').username;
