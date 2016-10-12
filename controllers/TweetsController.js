@@ -40,7 +40,7 @@ module.exports = {
       })
       .then(tweet => {
         createdTweet = tweet;
-        foundUser.tweets.push(tweet);
+        foundUser.tweets.push(tweet.toJSON());
         return foundUser.save()
       })
       .then(() => {
